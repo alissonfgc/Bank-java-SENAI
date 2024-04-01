@@ -11,11 +11,13 @@ public class Date {
 		this.year = year;		
 	}
 	
-	public String formatDatePTBR() {
-		return this.day + "/" + this.month + "/" + this.year;
+	public String formatedDatePTBR() {
+		String date = String.format("%02d/%02d/%4d", this.day, this.month, this.year);
+		return date;
 	}
 
-	public String formatDateUS() {
-		return this.month + "/" + this.day + "/" + this.year;
+	public String formatedDateUS() {
+		String date = String.format("%02d/%02d/%4d", this.month, this.day, this.year);
+		return date;
 	}
 }

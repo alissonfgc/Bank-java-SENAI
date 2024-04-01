@@ -2,6 +2,7 @@ package br.com.entities;
 
 public class Account {
 	private int idACC;
+	//private int password;
 	private String holderNameACC;
 	private String agencyACC;
 	private String openDateACC;
@@ -21,6 +22,16 @@ public class Account {
 	}
 	
 	//Methods getters and setters
+	/*
+	private int getPassword() {
+		return idACC;
+	}
+	
+	private void setPassword(int password) {
+		this.password = password;
+	}
+	*/
+	
 	public int getIdACC() {
 		return idACC;
 	}
@@ -50,7 +61,7 @@ public class Account {
 	}
 	
 	private void setOpenDateACC(Date openDate) {
-		this.openDateACC = openDate.formatDatePTBR();
+		this.openDateACC = openDate.formatedDatePTBR();
 	}
 	
 	public double getBalanceACC() {
@@ -114,7 +125,8 @@ public class Account {
 	}
 	
 	public String dataPrint() {
-		return "Id: " + Account.this.getIdACC() + "\nHolder: " + Account.this.getHolderNameACC() + "\nAgency: " + Account.this.getAgencyACC() + "\nOpen date: " + Account.this.getOpenDateACC().toString() + "\nBalance: " + Account.this.getBalanceACC() + "\nNumber: " + Account.this.getNumberACC() + "\n";
+		return String.format("ID: %d \n", Account.this.getIdACC()) + String.format("Holder: %s \n", Account.this.getHolderNameACC()) + String.format("Agency: %s \n", Account.this.getAgencyACC()) + String.format("Open date: %s \n", Account.this.getOpenDateACC()) + String.format("Balance: %.2f \n", Account.this.getBalanceACC()) + String.format("Number: %d \n", Account.this.getNumberACC());
+				
 	}
 	
 }
