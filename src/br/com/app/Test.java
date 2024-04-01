@@ -63,7 +63,11 @@ public class Test {
 		System.out.println("Total de contas: " + acc3.getTotalAccounts());
 		
 		sc.close();
-
+		
+		//Method validateCPF
+		PrivatePerson pp = new PrivatePerson("054.134.528-99");
+		System.out.println(pp.validateCPF());
+		
 	}
 
 }
